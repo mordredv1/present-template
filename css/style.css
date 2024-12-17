@@ -251,6 +251,29 @@ figure {
 @media screen and (max-width: 480px) {
   .pb70 {
     padding-bottom: 30px;
+
+    /* Force images to fill container and resize responsively */
+.fh5co-projects-feed .fh5co-project > a img {
+    width: 100%; /* Ensure the image fits the container width */
+    height: 200px; /* Fixed height for uniform image size */
+    object-fit: cover; /* Crop image to fit the dimensions without distortion */
+    display: block;
+    border-radius: 5px; /* Optional: Add rounded corners for aesthetics */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .fh5co-projects-feed .fh5co-project > a img {
+        height: 150px; /* Adjust height for tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fh5co-projects-feed .fh5co-project > a img {
+        height: 120px; /* Adjust height for mobile devices */
+    }
+}
+
   }
 }
 
